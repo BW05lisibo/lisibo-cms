@@ -6,7 +6,7 @@ import com.lisibo.entity.Channel;
 
 /**
  * 
- * @author Zhang旭涛
+ * @author lisibo
  *
  */
 public interface ChannelService {

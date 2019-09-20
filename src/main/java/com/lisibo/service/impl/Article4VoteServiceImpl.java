@@ -12,7 +12,7 @@ import com.lisibo.service.Article4VoteService;
 
 /**
  * 
- * @author Zhang旭涛
+ * @author lisibo
  *
  */
 @Service

@@ -7,7 +7,7 @@ import com.lisibo.entity.Article;
 
 /**
  * 
- * @author Zhang旭涛
+ * @author lisibo
  *
  */
 public interface ArticleService {

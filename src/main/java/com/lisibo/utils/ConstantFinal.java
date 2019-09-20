@@ -2,7 +2,7 @@ package com.lisibo.utils;
 
 /**
  * 
- * @author Zhang旭涛
+ * @author lisibo
  *  常量类
  */
 public class ConstantFinal {

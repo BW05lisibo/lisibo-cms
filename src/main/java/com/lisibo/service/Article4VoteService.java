@@ -7,7 +7,7 @@ import com.lisibo.entity.VoteStatic;
 
 /**
  * 
- * @author Zhang旭涛
+ * @author lisibo
  *
  */
 public interface Article4VoteService {

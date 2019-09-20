@@ -2,7 +2,7 @@ package com.lisibo.entity;
 
 /**
  * 用于查询
- * @author Zhang旭涛
+ * @author lisibo
  *
  */
 public class UserVo  extends User{

@@ -4,7 +4,7 @@ import com.alibaba.druid.sql.visitor.functions.Char;
 
 /**
  * 投票的統計
- * @author Zhang旭涛
+ * @author lisibo
  *
  */
 public class VoteStatic {

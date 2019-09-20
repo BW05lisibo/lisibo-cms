@@ -13,7 +13,7 @@ import com.lisibo.entity.VoteStatic;
 
 /**
  * 
- * @author Zhang旭涛
+ * @author lisibo
  *
  */
 @Mapper
