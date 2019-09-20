@@ -40,13 +40,13 @@ String htmlData = request.getParameter("content1") != null ? request.getParamete
 	<form action="" id="form">
 		<div class="form-group row ">
 			<label for="title">文章标题</label> <input type="text"
-				class="form-control" id="title" name="title" placeholder="请输入标题">
+				class="form-control" id="title" name="title" placeholder="请输入标题" value="${article.title }">
 		</div>
 
 
 		<div class="form-group row ">
 			<textarea name="content1" cols="100" rows="8"
-				style="width: 860px; height: 250px; visibility: hidden;"><%=htmlspecialchars(htmlData)%></textarea>
+				style="width: 860px; height: 250px; visibility: hidden;"><%=htmlspecialchars(htmlData)%>${article.content }</textarea>
 			<br />
 		</div>
 		<div class="form-group row ">
@@ -98,7 +98,7 @@ function publish(){
 			url:"/article/publish",
 			success:function(obj){
 				if(obj){
-					alert("发布成功1111!")
+					alert("发布成功")
 					$('#center').load("/article/listMyArticle");
 				}else{
 					alert("发布失败")
@@ -121,9 +121,6 @@ function publish(){
 }
 
 
-
-
-	
 	
 	//自动加载文章的栏目
 	$.ajax({
@@ -134,9 +131,17 @@ function publish(){
 			for(var i in list){
 				$("#channel").append("<option value='"+list[i].id+"'>"+list[i].name+"</option>")
 			}
+			var channelid=${article.channelId};
+			$("#channel").val(channelid);
 		}
 		
 	})
+	
+	
+	
+	
+	
+	
 	//为栏目添加绑定事件
 	$("#channel").change(function(){
 		 //先清空原有的栏目下的分类
@@ -149,6 +154,7 @@ function publish(){
 		  $("#category").append("<option value='"+list[i].id+"'>"+list[i].name+"</option>")
 
 		 }
+		 
 		 
 	 })
 

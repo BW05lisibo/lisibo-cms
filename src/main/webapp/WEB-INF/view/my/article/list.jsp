@@ -14,6 +14,11 @@ function myopen(id){
 	window.open("/article/getDetail?aId="+id,"_blank");
 	
 }
+function toupdate(id){
+	// alert(id)
+	$("#center").load("/article/toupdate?id="+id);
+	
+}
 
 </script>
 </head>
@@ -24,6 +29,9 @@ function myopen(id){
 			<dt><a href="javascript:myopen(${article.id })">${article.title }</a></dt>
 			<dd>作者:${sessionScope.USER_SESSION_KEY.username} 发布时间:${article.created}
 				频道:${article.chnName}  分类:${article.catName}
+			</dd>
+			<dd>
+				<a href="javascript:toupdate(${article.id })">详情</a>
 			</dd>
 		</dl>
 		<hr>

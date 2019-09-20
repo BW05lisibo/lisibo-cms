@@ -41,6 +41,12 @@
 		<script type="text/javascript">
 			function vote(){
 				
+				var option=$("[name=option]:checked");
+				if(option.length<=0){
+					alert("请先选择你要投的人");
+					return ;
+				}
+				
 				var data = $("#form").serialize();
 				$.post("/vote/vote",data,function(obj){
 					if(obj){
